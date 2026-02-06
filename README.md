@@ -32,7 +32,7 @@ English is a Germanic <strong>tongue</strong> that has borrowed <strong>strongly
 
 ## Demo
 
-Run the demo on [panglish.vercel.app](https://panglish.vercel.app)
+Run the demo on [panglish.joncoded.com](https://panglish.joncoded.com) or [panglish.vercel.app](https://panglish.vercel.app) if I forget to pay the bills
 
 ![panglish home page](./images/screenshot1.png)
 ![panglish home page](./images/screenshot2.png)
