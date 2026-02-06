@@ -56,6 +56,7 @@ export default function SearchBar({ onSearch, onReset, isCompact = false }: Sear
             rounded-full bg-white dark:bg-gray-800 
             focus:outline-none focus:border-green-500 dark:focus:border-green-400
             transition-all duration-200
+            placeholder:text-sm md:placeholder:text-lg placeholder:text-gray-400 dark:placeholder:text-gray-500
             ${isCompact ? 'py-3 text-base' : 'py-4'}
             ${(query || isCompact) ? 'pr-36' : 'pr-32'}`}
         />
