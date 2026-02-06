@@ -62,7 +62,7 @@ export default function TranslationResults({
       </div>
 
       {/* explanation */}
-      <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+      <div className="p-6 bg-yellow-50 dark:bg-gray-800 rounded-lg border border-yellow-200 dark:border-yellow-700">
         <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
           <span>📚</span> Etymology
         </h3>
@@ -73,7 +73,7 @@ export default function TranslationResults({
 
       {/* alternatives */}
       {result.alternatives && result.alternatives.length > 0 && (
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+        <div className="p-6 bg-red-50 dark:bg-gray-800 rounded-lg border border-red-200 dark:border-red-700">
           <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
             <span>🔄</span> Alternates 
           </h3>
@@ -82,7 +82,7 @@ export default function TranslationResults({
             {result.alternatives.map((alt, index) => (
               <li 
                 key={index}
-                className="text-gray-700 dark:text-gray-300 pl-4 border-l-2 border-gray-300 dark:border-gray-600"
+                className="text-red-700 dark:text-gray-300 pl-4 border-l-2 border-red-300 dark:border-red-600"
               >
                 {alt}
               </li>
