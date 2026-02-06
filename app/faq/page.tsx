@@ -41,6 +41,11 @@ export default function FAQ() {
             question="Is this a ripoff of Anglish?"
             answer={<><p>Now, similar languages like Dutch and German aren't ripoffs of each other, are they? Also, even with "constructed" languages, inspiration has to come from somewhere!</p><p>An influencer to Panglish, <a href="https://anglish.org/wiki/Anglish" target="_blank">Anglish</a> is a similar but distinct project that also tries to take English back to its Germanic roots. However, Anglish has a different approach that ends up making words sound more 'foreign' or 'medieval'. Its <a href="https://wordbook.anglish.org/">wordbook </a> often uses forgotten words like 'frith' and 'ovet', which still makes it a fun way to explore English's Germanic heritage.</p><p>On the other hand, Panglish tries to make natural-sounding translations, in a way that contemporary English speakers (you and I) can understand!</p></>}
           />
+
+          <FAQItem 
+            question="'Panglish' isn't even Panglish!"
+            answer="Not a question, but hey, is 'German' even German? The name 'Panglish' is meant to be catchy and convey the idea of 'all-English'. You can call it <em>Danglish</em> if you really give a dang!"
+          />
           
           <FAQItem 
             question="Why are some translations longer?"
