@@ -57,8 +57,8 @@ export default function About() {
             <li>construct natural-sounding "Panglish" expressions</li>
             <li>provide etymological (word origin) explanations when relevant</li>
           </ul>
-          <p className="text-lg leading-relaxed mt-4">
-            On top of that, I have made it a goal to ensure the translations sound natural and fluent, rather than stilted or forced. As a web developer, I also wanted to put together something that uses AI but would look more like a website. 
+          <p className="text-lg leading-relaxed">
+            On top of that, my goal is to ensure the translations would sound like something an average English speaker would understand. I'm also a web developer, so I wanted to learn some things about AI but make something that looked more like a website.
           </p>
         </section>
 
