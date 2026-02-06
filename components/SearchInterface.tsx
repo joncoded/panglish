@@ -80,7 +80,7 @@ export default function SearchInterface() {
             : 'py-20 md:py-32'
         }`}
       >
-        {/* Title - fades out after search */}
+        {/* title - fades out after search query */}
         <div 
           className={`text-center mb-8 transition-all duration-500 ${
             hasSearched 
@@ -91,12 +91,18 @@ export default function SearchInterface() {
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             Welcome to Panglish
           </h1>
+          <p className="text-lg text-gray-500 dark:text-gray-500 my-2">
+            (<strong>Panglish</strong> = <em className="mr-1">"Pan-"</em> ["all"] + "English")
+          </p>
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            Discover the Germanic roots of English words
+            Find out how English would have looked had it stuck with its earlier word roots!
+          </p>
+          <p className="text-md text-gray-500 dark:text-gray-500 mt-2">
+            e.g. "translation" → "tongue-shift", "philosophy" → "mind-lore"
           </p>
         </div>
 
-        {/* Search bar */}
+        {/* search bar - remains before and after a user query */}
         <SearchBar 
           onSearch={handleSearch}
           onReset={handleReset}
@@ -104,7 +110,7 @@ export default function SearchInterface() {
         />
       </div>
 
-      {/* Results section */}
+      {/* results - show after user submits a search query  */}
       {hasSearched && (
         <div className="flex flex-col items-center px-4 pb-12">
           <TranslationResults 
