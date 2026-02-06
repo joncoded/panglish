@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main a {
+  color: #009900;
+  text-decoration: none;
+}
+
+main a:hover {
+  color: #003300;
+  text-decoration: underline;
+}
+
+main p {
+  margin: 15px 0;
+}
+
+footer a {
+  color: #00cc00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+} 
