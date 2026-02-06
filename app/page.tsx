@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSearchParams, useRouter } from 'next/navigation'
 import SearchBar from '../components/SearchBar'
 import TranslationResults from '../components/TranslationResults'
 import { TranslationResponse } from '@/types/translation'
@@ -11,13 +12,29 @@ export default function Home() {
   const [hasSearched, setHasSearched] = useState(false)
   const [result, setResult] = useState<TranslationResponse | undefined>()
   const [error, setError] = useState<string | undefined>()
+  
+  const searchParams = useSearchParams()
+  const router = useRouter()
 
-  const handleSearch = async (query: string) => {
+  // check if URL contains ?q= string on initial load
+  useEffect(() => {
+    const queryFromUrl = searchParams.get('q')
+    if (queryFromUrl) {
+      handleSearch(queryFromUrl, false) // Don't update URL again
+    }
+  }, []) 
+
+  const handleSearch = async (query: string, updateUrl = true) => {
     setIsLoading(true)
     setSearchQuery(query)
     setHasSearched(true)
     setError(undefined)
     setResult(undefined)
+
+    // when queried from the search bar, update the URL
+    if (updateUrl) {
+      router.push(`/?q=${encodeURIComponent(query)}`, { scroll: false })
+    }
 
     try {
       const response = await fetch('/api/translate', {
@@ -48,6 +65,9 @@ export default function Home() {
     setResult(undefined)
     setError(undefined)
     setIsLoading(false)
+    
+    // remove query when user clicks reset
+    router.push('/', { scroll: false })
   }
 
   return (
