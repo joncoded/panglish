@@ -58,7 +58,7 @@ export default function SearchBar({ onSearch, onReset, isCompact = false }: Sear
             transition-all duration-200
             placeholder:text-sm md:placeholder:text-lg placeholder:text-gray-400 dark:placeholder:text-gray-500
             ${isCompact ? 'py-3 text-base' : 'py-4'}
-            ${(query || isCompact) ? 'pr-36' : 'pr-32'}`}
+            ${(query || isCompact) ? 'pr-44 sm:pr-40' : 'pr-32'}`}
         />
         <div className="absolute right-2 top-1/2 -translate-y-1/2 flex gap-2">
           {(query || isCompact) && (
@@ -67,7 +67,7 @@ export default function SearchBar({ onSearch, onReset, isCompact = false }: Sear
               onClick={handleReset}
               className={`bg-gray-500 hover:bg-gray-600 text-white font-semibold
                 rounded-full transition-all duration-200
-                ${isCompact ? 'px-4 py-2 text-sm' : 'px-5 py-3 text-sm'}`}
+                ${isCompact ? 'px-2 py-2 text-sm' : 'px-4 py-3 text-sm'}`}
               title="Clear and start new search"
             >
               Clear
@@ -77,7 +77,7 @@ export default function SearchBar({ onSearch, onReset, isCompact = false }: Sear
             type="submit"
             className={`bg-green-500 hover:bg-green-600 text-white font-semibold
               rounded-full transition-all duration-200
-              ${isCompact ? 'px-6 py-2 text-sm' : 'px-8 py-3'}`}
+              ${isCompact ? 'px-2 py-2 text-sm' : 'px-4 py-3'}`}
             title="Translate to Panglish"
           >
             Translate
