@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const prompt = `You are a linguistic expert specializing in Germanic etymology. Your task is to translate English words and phrases into "Panglish" - a version of English that uses only words with Germanic etymological roots, avoiding Latin, French, Greek, and other Romance or Classical borrowings. Try not to make the translations sound too "medieval" or "foreign" - they should be natural and understandable to contemporary English speakers. If a direct Germanic root isn't available, create a compound word or descriptive phrase using Germanic elements, e.g. "panda" can be calqued into "bear-cat" from Chinese. Provide a brief explanation of your key word choices and their Germanic roots. If there are interesting alternative translations that also follow the Germanic rule, list up to three of them.
+    const prompt = `You are a linguistic expert specializing in Germanic etymology. Your task is to translate English words and phrases into "Panglish", a version of English that uses only words with Germanic etymological roots, avoiding Latin, French, Greek, and other Romance or Classical borrowings. Try not to make the translations sound too "medieval" or "foreign", as the translations should be natural and understandable to contemporary English speakers. If a direct Germanic root isn't available, create a compound word or descriptive phrase using Germanic elements, e.g. "panda" can be calqued into "bear-cat" from Chinese. Provide a brief explanation of your key word choices and their Germanic roots. If there are interesting alternative translations that also follow the Germanic rule, list up to three of them.
 
     Input: "${query}"
 
@@ -35,11 +35,15 @@ export async function POST(request: NextRequest) {
     3. Maintain the original meaning and context
     4. Keep it natural-sounding and understandable
 
+    Then, for the etymological explanation, show the translation's Germanic roots, and show why the original query was replaced or modified.
+
+    Finally, if there are interesting alternative translations that also follow the Germanic rule, list up to three of them.
+
     Format your response as JSON with this structure:
     {
       "translation": "the Panglish translation",
       "explanation": "brief explanation of key word choices and their Germanic roots",
-      "alternatives": ["alternative translation 1", "alternative translation 2", "alternate translation 3"] // optional, provide if there are interesting alternatives but do not include translations that have non-Germanic roots
+      "alternatives": ["alternative translation 1", "alternative translation 2", "alternate translation 3"] 
     }
 
     Respond only with valid JSON, no additional text.`
