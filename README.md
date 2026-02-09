@@ -91,7 +91,7 @@ Make changes by following this procedure:
 * open pull request
   * https://github.com/joncoded/panglish/pulls
 
-Also, feel free to [raise any issues](https://github.com/joncoded/esleasel/issues)!
+Also, feel free to [raise any issues](https://github.com/joncoded/panglish/issues)!
 
 ## Credits
 
