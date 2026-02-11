@@ -43,7 +43,7 @@ export default function SearchBar({ onSearch, onReset, isCompact = false }: Sear
     <form 
       onSubmit={handleSubmit} 
       className={`w-full transition-all duration-500 ${
-        isCompact ? 'max-w-3xl' : 'max-w-2xl'
+        isCompact ? 'max-w-7xl' : 'max-w-2xl'
       }`}
     >
       <div className="relative">

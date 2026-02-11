@@ -5,6 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation'
 import SearchBar from './SearchBar'
 import TranslationResults from './TranslationResults'
 import { TranslationResponse } from '@/types/translation'
+import { getCachedTranslation, setCachedTranslation } from '@/lib/cache'
 
 export default function SearchInterface() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -37,6 +38,12 @@ export default function SearchInterface() {
     }
 
     try {
+      const cached = getCachedTranslation<TranslationResponse>(query)
+      if (cached) {
+        setResult(cached)
+        return
+      }
+
       const response = await fetch('/api/translate', {
         method: 'POST',
         headers: {
@@ -52,6 +59,7 @@ export default function SearchInterface() {
       }
 
       setResult(data.data)
+      setCachedTranslation(query, data.data)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An unexpected error occurred')
     } finally {
@@ -100,14 +108,15 @@ export default function SearchInterface() {
           <p className="text-md text-gray-500 dark:text-gray-500 mt-2">
             e.g. "translation" → "tongue-shift", "philosophy" → "mind-lore"
           </p>
-        </div>
+        </div>        
 
         {/* search bar - remains before and after a user query */}
         <SearchBar 
           onSearch={handleSearch}
           onReset={handleReset}
           isCompact={hasSearched}
-        />
+        />        
+
       </div>
 
       {/* results - show after user submits a search query  */}

@@ -15,7 +15,7 @@ export default function TranslationResults({
 }: TranslationResultsProps) {
   if (isLoading) {
     return (
-      <div className="w-full max-w-3xl mt-8 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg animate-pulse">
+      <div className="w-full max-w-7xl mt-8 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg animate-pulse">
         <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-1/4 mb-4"></div>
         <div className="h-6 bg-gray-300 dark:bg-gray-600 rounded w-3/4 mb-2"></div>
         <div className="h-6 bg-gray-300 dark:bg-gray-600 rounded w-2/3 mb-4"></div>
@@ -26,7 +26,7 @@ export default function TranslationResults({
 
   if (error) {
     return (
-      <div className="w-full max-w-3xl mt-8 p-8 bg-red-50 dark:bg-red-900/20 rounded-lg border-2 border-red-200 dark:border-red-800">
+      <div className="w-full max-w-7xl mt-8 p-8 bg-red-50 dark:bg-red-900/20 rounded-lg border-2 border-red-200 dark:border-red-800">
         <h2 className="text-sm font-semibold text-red-600 dark:text-red-400 uppercase mb-2">
           Error
         </h2>
@@ -42,7 +42,7 @@ export default function TranslationResults({
   }
 
   return (
-    <div className="w-full max-w-3xl mt-8 space-y-6">
+    <div className="w-full max-w-7xl mt-8 space-y-6">
 
       {/* main translation */}
       <div className="p-8 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-indigo-900/20 rounded-lg border-2 border-green-200 dark:border-green-800">
