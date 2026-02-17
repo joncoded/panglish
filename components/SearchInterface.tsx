@@ -44,7 +44,7 @@ export default function SearchInterface() {
         return
       }
 
-      const response = await fetch('/api/panglish', {
+      const response = await fetch('/api/translate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
