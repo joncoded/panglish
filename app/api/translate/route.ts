@@ -36,7 +36,8 @@ export async function POST(request: NextRequest) {
     4. Keep it natural-sounding and understandable
     5. Replace any hyphenations with spaces to ensure the translation is a single, natural phrase
     6. Try to match the part of speech of the original word
-    7. If the word already has Germanic roots, keep the translation the same but still explain its etymology... 
+    7. If it is not possible to create a translation that follows the Germanic root rule, please provide your best effort at a translation that follows the rules as closely as possible, and explain which parts of the translation do not follow the Germanic root rule and why. Do not fabricate any etymologies.
+    8. If the word already has Germanic roots, keep the translation the same but still explain its etymology... 
        a. For example, if a user enters "spreadsheet", keep the translation as "spreadsheet" but explain how the word comes from Germanic roots! 
        b. Do not provide any synonyms to confuse the user! 
 
