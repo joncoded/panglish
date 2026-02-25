@@ -40,12 +40,15 @@ export async function POST(request: NextRequest) {
        a. For example, if a user enters "spreadsheet", keep the translation as "spreadsheet" but explain how the word comes from Germanic roots! 
        b. Do not provide any synonyms to confuse the user! 
 
-    Then, for the etymological explanation, show the translation's Germanic roots, and show why the original query was replaced or modified, if it was modified.    
+    Then, for the etymological explanation, show the translation's Germanic roots, and show why the original query was replaced or modified, if it was modified.   
+    
+    Finally, if there are alternatives for translations that also follow the Germanic rule, list up to three of them. Do not make translations with words that do not have Germanic roots.
 
     Format your response as JSON with this structure:
     {
       "translation": "the Panglish translation",
-      "explanation": "brief explanation of key word choices and their Germanic roots"
+      "explanation": "brief explanation of key word choices and their Germanic roots",
+      "alternatives": ["alternative Germanic translation 1", "alternative Germanic translation 2", "alternative Germanic translation 3"] 
     }
 
     Respond only with valid JSON, no additional text.`
